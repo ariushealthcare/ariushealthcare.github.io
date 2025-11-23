@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arius Healthcare Private Limited - Quality Healthcare Solutions for Pain Management, Respiratory Care, and Antibiotics">
+    <title>Arius Healthcare Private Limited | Quality Healthcare Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-blue: #1e3a8a;
+            --light-blue: #3b82f6;
+            --arius-red: #dc2626;
+            --dark-red: #991b1b;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-gray: #64748b;
+            --white: #ffffff;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(to right, var(--white) 0%, var(--bg-light) 100%);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            z-index: 1000;
+            padding: 0.8rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        nav.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+        }
+        
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        
+        .logo-container {
+            width: 70px;
+            height: 70px;
+            background: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.2);
+            border: 2px solid var(--arius-red);
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-container:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .company-name h1 {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        .company-name p {
+            font-size: 0.9rem;
+            color: var(--arius-red);
+            font-weight: 500;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--arius-red);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--arius-red);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--light-blue) 50%, var(--primary-blue) 100%);
+            color: white;
+            padding: 10rem 2rem 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            font-weight: 300;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero .mission-text {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: rgba(255,255,255,0.15);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+            font-style: italic;
+            animation: fadeInUp 1.2s ease;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .cta-button {
+            margin-top: 3rem;
+            padding: 1.2rem 3rem;
+            background: var(--arius-red);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(220, 38, 38, 0.4);
+            animation: fadeInUp 1.4s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(220, 38, 38, 0.6);
+            background: var(--dark-red);
+        }
+        
+        section {
+            padding: 6rem 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-blue);
+            text-align: center;
+            font-weight: 800;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--arius-red);
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            margin-bottom: 4rem;
+            margin-top: 2rem;
+        }
+        
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        
+        .mission-card, .vision-card {
+            background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(30, 58, 138, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .mission-card:hover, .vision-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .mission-card h3, .vision-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .mission-card p, .vision-card p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about-content p {
+            font-size: 1.2rem;
+            line-height: 2;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+        
+        .category-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--arius-red);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--arius-red), var(--primary-blue));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .category-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+        
+        .category-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .category-card p {
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+        
+        .category-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .category-card li {
+            padding: 1rem 0;
+            color: var(--text-dark);
+            border-bottom: 1px solid #e2e8f0;
+            font-weight: 500;
+            transition: padding-left 0.3s ease;
+        }
+        
+        .category-card li:hover {
+            padding-left: 10px;
+            color: var(--arius-red);
+        }
+        
+        .category-card li:last-child {
+            border-bottom: none;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            border-color: var(--arius-red);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, var(--bg-light), white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            border-bottom: 3px solid var(--arius-red);
+        }
+        
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .product-header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+            color: white;
+            padding: 2.5rem;
+        }
+        
+        .product-header h3 {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+        
+        .product-header .composition {
+            font-size: 1rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .product-body {
+            padding: 2.5rem;
+        }
+        
+        .product-body p {
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--arius-red);
+        }
+        
+        .product-body ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .product-body li {
+            padding: 0.9rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-dark);
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+        
+        .product-body li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--arius-red);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        .product-body li:hover {
+            padding-left: 2.5rem;
+            color: var(--primary-blue);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+        
+        .feature-box {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: white;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border: 2px solid transparent;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(220, 38, 38, 0.15);
+            border-color: var(--arius-red);
+        }
+        
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-box:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .feature-box h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .feature-box p {
+            color: var(--text-gray);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        
+        .contact-card {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--arius-red);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+        
+        .contact-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--arius-red);
+        }
+        
+        .contact-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .contact-card p {
+            color: var(--text-dark);
+            margin: 1rem 0;
+            font-size: 1.05rem;
+        }
+        
+        .contact-card a {
+            color: var(--arius-red);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card a:hover {
+            color: var(--primary-blue);
+            text-decoration: underline;
+        }
+        
+        .contact-cta {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--bg-light), white);
+            border-radius: 20px;
+            border: 3px solid var(--arius-red);
+        }
+        
+        .contact-cta h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .contact-cta p {
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        footer p {
+            margin: 0.8rem 0;
+            opacity: 0.95;
+            font-size: 1rem;
+        }
+        
+        .footer-highlight {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .category-grid,
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav .container {
+                padding: 0 1.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 8rem 1.5rem 4rem;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 4rem 1.5rem;
+            }
+            
+            section h2 {
+                font-size: 2.2rem;
+            }
+            
+            .products-grid,
+            .category-grid,
+            .contact-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .company-name h1 {
+                font-size: 1.1rem;
+            }
+            
+            .company-name p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo-container">
+                    <img src="logo.png" alt="Arius Healthcare Logo">
+                </div>
+                <div class="company-name">
+                    <h1>Arius Healthcare Private Limited</h1>
+                    <p>Quality Healthcare Solutions</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#mission">Mission & Vision</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#why-us">Why Choose Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Quality Healthcare Solutions</h2>
+            <p class="tagline">Trusted Pharmaceutical Products for Pain Management, Respiratory Care, and Antibiotic Treatment</p>
+            <div class="mission-text">
+                "When it comes to your health, nothing matters more than your well-being. Your health is our priority, your wellness is our only goal."
+            </div>
+            <a href="#products" class="cta-button">Explore Our Products</a>
+        </div>
+    </section>
+
+    <section id="mission" style="background: var(--bg-light);">
+        <h2>Our Mission & Vision</h2>
+        <p class="section-subtitle">Committed to your health and well-being above all else</p>
+        
+        <div class="mission-vision-grid">
+            <div class="mission-card">
+                <h3>🎯 Our Mission</h3>
+                <p>
+                    To provide safe, effective, and authentic pharmaceutical solutions that prioritize patient well-being above all else. 
+                    We are dedicated to manufacturing high-quality medicines with minimal side effects, ensuring that every patient receives 
+                    the care they deserve. Your health is not just our business—it's our responsibility and our commitment.
+                </p>
+            </div>
+            
+            <div class="vision-card">
+                <h3>🔭 Our Vision</h3>
+                <p>
+                    To become the most trusted name in pharmaceutical care, where healthcare professionals confidently prescribe our products 
+                    knowing that patient wellness is our unwavering focus. We envision a future where every individual has access to safe, 
+                    effective medicines that truly make a difference in their lives—because nothing matters more than your well-being.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Arius Healthcare</h2>
+        <p class="section-subtitle">Your well-being is our only goal</p>
+        <div class="about-content">
+            <p>
+                At Arius Healthcare Private Limited, we understand that when it comes to your health, there can be no compromise. 
+                We are committed to manufacturing pharmaceutical products that place patient safety and therapeutic efficacy at the forefront 
+                of everything we do.
+            </p>
+            <p>
+                Our focus on quality formulations with minimal side effects reflects our core belief: your well-being is the most important 
+                thing to us. Every product we develop undergoes rigorous quality standards to ensure optimal patient outcomes and give 
+                healthcare professionals the confidence to prescribe with trust.
+            </p>
+            <p>
+                We specialize in three core therapeutic areas—Pain Management, Respiratory Care, and Antibiotics—delivering comprehensive 
+                solutions that healthcare professionals can rely on and patients can trust. Because at Arius Healthcare, nothing matters 
+                more than your health.
+            </p>
+        </div>
+    </section>
+
+    <section style="background: var(--bg-light);">
+        <h2>Our Therapeutic Categories</h2>
+        <p class="section-subtitle">Comprehensive solutions across key healthcare areas</p>
+        <div class="category-grid">
+            <div class="category-card">
+                <h3>💊 Pain Management</h3>
+                <p>Effective relief for pain, fever, and inflammation with superior safety profiles and minimal side effects</p>
+                <ul>
+                    <li>OKE - Anti-inflammatory + Analgesic</li>
+                    <li>OKE-650 - Pain & Fever Relief</li>
+                    <li>OKE Spas - Pain & Muscle Spasm Relief</li>
+                </ul>
+            </div>
+            
+            <div class="category-card">
+                <h3>🫁 Respiratory Care</h3>
+                <p>Comprehensive cough and cold management for complete respiratory relief and patient comfort</p>
+                <ul>
+                    <li>Syllantus QR Syrup - All Rounder for Cough & Cold</li>
+                </ul>
+            </div>
+            
+            <div class="category-card">
+                <h3>🦠 Antibiotics</h3>
+                <p>Broad-spectrum antimicrobial coverage for aerobic, anaerobic, and mixed infections</p>
+                <ul>
+                    <li>L-Sure OZ - Balanced Antimicrobial Coverage</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <p class="section-subtitle">Detailed information for healthcare professionals</p>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="oke.png" alt="OKE Product">
+                </div>
+                <div class="product-header">
+                    <h3>OKE</h3>
+                    <p class="composition">Nimesulide 100mg + Paracetamol 350mg</p>
+                </div>
+                <div class="product-body">
+                    <p>All Rounder of Cough and Cold</p>
+                    <ul>
+                        <li>Cough Suppressant (Dextromethorphen)</li>
+                        <li>Relieves nasal & Sinus Congestion (Phenylephrine)</li>
+                        <li>Ambroxol breaks down the mucus and helps in faster expectoration</li>
+                        <li>Guaiphenesin increases the lubrication of lungs allowing for a productive cough</li>
+                        <li>Is a mucolytic which breaks mucous down (Sodium Citrate)</li>
+                        <li>Effective for COPD, bronchospasm, irritation, smoker's cough, sneezing, asthma, blocked nose, allergic cough</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="lsure-oz.png" alt="L-Sure OZ">
+                </div>
+                <div class="product-header">
+                    <h3>L-Sure OZ</h3>
+                    <p class="composition">Levofloxacin 250 mg + Ornidazole 500 mg</p>
+                </div>
+                <div class="product-body">
+                    <p>Balanced coverage against Aerobic, Anaerobic & Mixed Infections</p>
+                    <ul>
+                        <li>Broad spectrum antibacterial agent</li>
+                        <li>Possesses activity against a range of Gram positive & Gram negative bacteria & typical organisms</li>
+                        <li>Twice more potent than Ofloxacin & Ciprofloxacin</li>
+                        <li>Provides rapid eradication with good efficacy in acute dysentery</li>
+                        <li>Shows good activity against both anaerobes & protozoans</li>
+                        <li>Higher efficacy rate 72.3% vs 66% compared to metronidazole</li>
+                        <li>Indications: Gastrointestinal infections, gynecological infections, wound infections of aerobic, mixed infections of aerobic, dental infections</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" style="background: var(--bg-light);">
+        <h2>Why Choose Arius Healthcare</h2>
+        <p class="section-subtitle">Your well-being is our unwavering commitment</p>
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon">🎯</div>
+                <h3>Proven Efficacy</h3>
+                <p>Clinically effective formulations with demonstrated therapeutic outcomes that truly make a difference</p>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">✅</div>
+                <h3>Safety First</h3>
+                <p>Minimal side effects with unwavering focus on patient safety and tolerability—because your health matters most</p>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">⚕️</div>
+                <h3>Quality Standards</h3>
+                <p>Manufactured under strict quality control and regulatory compliance to ensure every dose is safe and effective</p>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">💊</div>
+                <h3>Targeted Solutions</h3>
+                <p>Specialized formulations designed for specific therapeutic needs with optimal patient outcomes in mind</p>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">🔬</div>
+                <h3>Scientific Approach</h3>
+                <p>Evidence-based medicine with rigorous focus on clinical outcomes and real-world efficacy</p>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">🤝</div>
+                <h3>Healthcare Partner</h3>
+                <p>Supporting physicians with reliable pharmaceutical solutions they can prescribe with complete confidence</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p class="section-subtitle">For product information, samples, or inquiries—we're here to help</p>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <p><a href="mailto:ariespharma@gmail.com">ariespharma@gmail.com</a></p>
+                <p style="margin-top: 1rem; color: var(--text-gray); font-size: 0.95rem;">For product inquiries and sample requests</p>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">📞</div>
+                <h3>Phone</h3>
+                <p style="font-weight: 600; font-size: 1.1rem;">+91 9425314381</p>
+                <p style="margin-top: 1rem; color: var(--text-gray); font-size: 0.95rem;">Monday - Saturday: 9:00 AM - 6:00 PM</p>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">🏢</div>
+                <h3>Office</h3>
+                <p style="font-weight: 600;">Arius Healthcare Private Limited</p>
+                <p style="margin-top: 1rem; color: var(--text-gray); font-size: 0.95rem;">Quality Healthcare Solutions</p>
+            </div>
+        </div>
+        
+        <div class="contact-cta">
+            <h3>For Healthcare Professionals</h3>
+            <p>Request product samples, prescribing information, or schedule a meeting with our medical representative</p>
+            <a href="mailto:ariespharma@gmail.com?subject=Product%20Sample%20Request" class="cta-button">Request Samples</a>
+        </div>
+    </section>
+
+    <footer>
+        <p class="footer-highlight">Arius Healthcare Private Limited</p>
+        <p>&copy; 2025 Arius Healthcare | All Rights Reserved</p>
+        <p style="margin-top: 1.5rem;">Quality Healthcare Solutions</p>
+        <p style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.8;">For the use of registered medical practitioners or a hospital or a laboratory only</p>
+        <p style="margin-top: 1.5rem; font-size: 0.95rem;">📧 ariespharma@gmail.com | 📞 +91 9425314381</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
+                    <p>Pain, Fever & Inflammation</p>
+                    <ul>
+                        <li>Offers powerful anti-inflammatory action</li>
+                        <li>Multi-pronged mode of anti-inflammatory action</li>
+                        <li>Selective inhibition of COX-2 enzyme for target specific result</li>
+                        <li>Outstanding performance in arthritis, low back pain, painful musculo-skeletal conditions</li>
+                        <li>Effective in pain associated with fever, sports injuries, dental pain, and painful conditions of E.N.T.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="oke-650.png" alt="OKE-650 Product">
+                </div>
+                <div class="product-header">
+                    <h3>OKE-650</h3>
+                    <p class="composition">Paracetamol 500/650 mg</p>
+                </div>
+                <div class="product-body">
+                    <p>The First Choice for Pain & Fever</p>
+                    <ul>
+                        <li>Safe & time tested anti-pyretic and analgesic</li>
+                        <li>Least GI disturbances</li>
+                        <li>Also effective in associated pain & inflammation</li>
+                        <li>Safety with outstanding efficacy</li>
+                        <li>Effective for headache, dental pain, fever, sinusitis, sciatica & lumbago, sprains & strains</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="oke-spas.png" alt="OKE Spas Product">
+                </div>
+                <div class="product-header">
+                    <h3>OKE Spas</h3>
+                    <p class="composition">Drotaverine 80mg + Mefenamic Acid 250mg</p>
+                </div>
+                <div class="product-body">
+                    <p>Untangle the Strangle hold of Pain & Spasm</p>
+                    <ul>
+                        <li>Excellent smooth muscle relaxant</li>
+                        <li>Free from anticholinergic side effects</li>
+                        <li>Safe in glaucoma & BPH patients</li>
+                        <li>The time tested analgesic</li>
+                        <li>Ensures longer relief from pain & inflammation</li>
+                        <li>Provides superior pain relief in primary dysmenorrheal</li>
+                        <li>No drowsiness/No urinary retention</li>
+                        <li>Indications: Gastrointestinal colic, biliary colic, post surgical spasm, muscle spasm, renal colic, dysmenorrhea</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="syllantus.png" alt="Syllantus QR Syrup">
+                </div>
+                <div class="product-header">
+                    <h3>Syllantus QR Syrup</h3>
+                    <p class="composition">Dextromethorphan 15mg + Cetirizine 5mg + Phenylephrine 8mg + Ambroxol 30mg + Guaiphenesin 100mg + Sodium Citrate 75mg</p>
+                </div>
+                <div class="product-body">

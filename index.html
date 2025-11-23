@@ -13,11 +13,13 @@
         }
         
         :root {
-            --primary-blue: #1e3a8a;
-            --light-blue: #3b82f6;
-            --arius-red: #dc2626;
-            --dark-red: #991b1b;
-            --bg-light: #f8fafc;
+            --primary-green: #059669;
+            --light-green: #10b981;
+            --dark-green: #047857;
+            --navy-blue: #1e3a8a;
+            --light-navy: #1e40af;
+            --bg-light: #f0fdf4;
+            --bg-green-tint: #d1fae5;
             --text-dark: #1e293b;
             --text-gray: #64748b;
             --white: #ffffff;
@@ -39,7 +41,7 @@
             top: 0;
             width: 100%;
             background: linear-gradient(to right, var(--white) 0%, var(--bg-light) 100%);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(5, 150, 105, 0.1);
             z-index: 1000;
             padding: 0.8rem 0;
             transition: all 0.3s ease;
@@ -47,7 +49,7 @@
         
         nav.scrolled {
             padding: 0.5rem 0;
-            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 30px rgba(5, 150, 105, 0.2);
         }
         
         nav .container {
@@ -73,8 +75,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.2);
-            border: 2px solid var(--arius-red);
+            box-shadow: 0 4px 15px rgba(5, 150, 105, 0.2);
+            border: 2px solid var(--primary-green);
             transition: transform 0.3s ease;
         }
         
@@ -90,14 +92,14 @@
         
         .company-name h1 {
             font-size: 1.5rem;
-            color: var(--primary-blue);
+            color: var(--navy-blue);
             font-weight: 700;
             letter-spacing: -0.5px;
         }
         
         .company-name p {
             font-size: 0.9rem;
-            color: var(--arius-red);
+            color: var(--primary-green);
             font-weight: 500;
         }
         
@@ -124,12 +126,12 @@
             left: 0;
             width: 0;
             height: 3px;
-            background: var(--arius-red);
+            background: var(--primary-green);
             transition: width 0.3s ease;
         }
         
         .nav-links a:hover {
-            color: var(--arius-red);
+            color: var(--primary-green);
         }
         
         .nav-links a:hover::after {
@@ -140,7 +142,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--light-blue) 50%, var(--primary-blue) 100%);
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 50%, var(--navy-blue) 100%);
             color: white;
             padding: 10rem 2rem 6rem;
             position: relative;
@@ -208,7 +210,7 @@
         .cta-button {
             margin-top: 3rem;
             padding: 1.2rem 3rem;
-            background: var(--arius-red);
+            background: var(--primary-green);
             color: white;
             text-decoration: none;
             border-radius: 50px;
@@ -216,14 +218,14 @@
             font-size: 1.1rem;
             display: inline-block;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 30px rgba(220, 38, 38, 0.4);
+            box-shadow: 0 8px 30px rgba(5, 150, 105, 0.4);
             animation: fadeInUp 1.4s ease;
         }
         
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(220, 38, 38, 0.6);
-            background: var(--dark-red);
+            box-shadow: 0 12px 40px rgba(5, 150, 105, 0.6);
+            background: var(--dark-green);
         }
         
         section {
@@ -235,7 +237,7 @@
         section h2 {
             font-size: 3rem;
             margin-bottom: 1.5rem;
-            color: var(--primary-blue);
+            color: var(--navy-blue);
             text-align: center;
             font-weight: 800;
             position: relative;
@@ -251,7 +253,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: var(--arius-red);
+            background: var(--primary-green);
             border-radius: 2px;
         }
         
@@ -271,11 +273,11 @@
         }
         
         .mission-card, .vision-card {
-            background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
             color: white;
             padding: 3rem;
             border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(30, 58, 138, 0.3);
+            box-shadow: 0 10px 40px rgba(5, 150, 105, 0.3);
             transition: transform 0.3s ease;
         }
         
@@ -321,9 +323,9 @@
             background: white;
             padding: 3rem;
             border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 30px rgba(5, 150, 105, 0.1);
             transition: all 0.3s ease;
-            border-top: 5px solid var(--arius-red);
+            border-top: 5px solid var(--primary-green);
             position: relative;
             overflow: hidden;
         }
@@ -335,7 +337,7 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(90deg, var(--arius-red), var(--primary-blue));
+            background: linear-gradient(90deg, var(--primary-green), var(--navy-blue));
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
@@ -346,11 +348,11 @@
         
         .category-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 50px rgba(5, 150, 105, 0.2);
         }
         
         .category-card h3 {
-            color: var(--primary-blue);
+            color: var(--navy-blue);
             margin-bottom: 1rem;
             font-size: 1.8rem;
             display: flex;
@@ -379,7 +381,7 @@
         
         .category-card li:hover {
             padding-left: 10px;
-            color: var(--arius-red);
+            color: var(--primary-green);
         }
         
         .category-card li:last-child {
@@ -388,24 +390,27 @@
         
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: 1fr;
             gap: 3rem;
             margin-top: 4rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .product-card {
             background: white;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 40px rgba(5, 150, 105, 0.15);
             transition: all 0.3s ease;
             border: 2px solid transparent;
         }
         
         .product-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            border-color: var(--arius-red);
+            box-shadow: 0 20px 60px rgba(5, 150, 105, 0.25);
+            border-color: var(--primary-green);
         }
         
         .product-image {
@@ -416,7 +421,7 @@
             align-items: center;
             justify-content: center;
             padding: 2rem;
-            border-bottom: 3px solid var(--arius-red);
+            border-bottom: 3px solid var(--primary-green);
         }
         
         .product-image img {
@@ -426,7 +431,7 @@
         }
         
         .product-header {
-            background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+            background: linear-gradient(135deg, var(--primary-green), var(--navy-blue));
             color: white;
             padding: 2.5rem;
         }
@@ -452,7 +457,7 @@
             color: var(--text-dark);
             font-weight: 600;
             font-size: 1.1rem;
-            color: var(--arius-red);
+            color: var(--primary-green);
         }
         
         .product-body ul {
@@ -473,14 +478,14 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: var(--arius-red);
+            color: var(--primary-green);
             font-weight: bold;
             font-size: 1.3rem;
         }
         
         .product-body li:hover {
             padding-left: 2.5rem;
-            color: var(--primary-blue);
+            color: var(--navy-blue);
         }
         
         .features-grid {
@@ -496,14 +501,14 @@
             background: white;
             border-radius: 20px;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 20px rgba(5, 150, 105, 0.1);
             border: 2px solid transparent;
         }
         
         .feature-box:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 50px rgba(220, 38, 38, 0.15);
-            border-color: var(--arius-red);
+            box-shadow: 0 15px 50px rgba(5, 150, 105, 0.2);
+            border-color: var(--primary-green);
         }
         
         .feature-icon {
@@ -518,7 +523,7 @@
         }
         
         .feature-box h3 {
-            color: var(--primary-blue);
+            color: var(--navy-blue);
             margin-bottom: 1rem;
             font-size: 1.4rem;
         }
@@ -540,25 +545,25 @@
             background: white;
             padding: 3rem 2rem;
             border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 30px rgba(5, 150, 105, 0.15);
             text-align: center;
             transition: all 0.3s ease;
-            border-top: 5px solid var(--arius-red);
+            border-top: 5px solid var(--primary-green);
         }
         
         .contact-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 50px rgba(5, 150, 105, 0.25);
         }
         
         .contact-icon {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
-            color: var(--arius-red);
+            color: var(--primary-green);
         }
         
         .contact-card h3 {
-            color: var(--primary-blue);
+            color: var(--navy-blue);
             margin-bottom: 1.5rem;
             font-size: 1.5rem;
         }
@@ -570,14 +575,14 @@
         }
         
         .contact-card a {
-            color: var(--arius-red);
+            color: var(--primary-green);
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
         }
         
         .contact-card a:hover {
-            color: var(--primary-blue);
+            color: var(--navy-blue);
             text-decoration: underline;
         }
         
@@ -587,11 +592,11 @@
             padding: 3rem;
             background: linear-gradient(135deg, var(--bg-light), white);
             border-radius: 20px;
-            border: 3px solid var(--arius-red);
+            border: 3px solid var(--primary-green);
         }
         
         .contact-cta h3 {
-            color: var(--primary-blue);
+            color: var(--navy-blue);
             margin-bottom: 1.5rem;
             font-size: 2rem;
         }
@@ -603,7 +608,7 @@
         }
         
         footer {
-            background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+            background: linear-gradient(135deg, var(--primary-green), var(--navy-blue));
             color: white;
             text-align: center;
             padding: 3rem 2rem;
@@ -805,6 +810,69 @@
                     <p class="composition">Nimesulide 100mg + Paracetamol 350mg</p>
                 </div>
                 <div class="product-body">
+                    <p>Pain, Fever & Inflammation</p>
+                    <ul>
+                        <li>Offers powerful anti-inflammatory action</li>
+                        <li>Multi-pronged mode of anti-inflammatory action</li>
+                        <li>Selective inhibition of COX-2 enzyme for target specific result</li>
+                        <li>Outstanding performance in arthritis, low back pain, painful musculo-skeletal conditions</li>
+                        <li>Effective in pain associated with fever, sports injuries, dental pain, and painful conditions of E.N.T.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="oke-650.png" alt="OKE-650 Product">
+                </div>
+                <div class="product-header">
+                    <h3>OKE-650</h3>
+                    <p class="composition">Paracetamol 500/650 mg</p>
+                </div>
+                <div class="product-body">
+                    <p>The First Choice for Pain & Fever</p>
+                    <ul>
+                        <li>Safe & time tested anti-pyretic and analgesic</li>
+                        <li>Least GI disturbances</li>
+                        <li>Also effective in associated pain & inflammation</li>
+                        <li>Safety with outstanding efficacy</li>
+                        <li>Effective for headache, dental pain, fever, sinusitis, sciatica & lumbago, sprains & strains</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="oke-spas.png" alt="OKE Spas Product">
+                </div>
+                <div class="product-header">
+                    <h3>OKE Spas</h3>
+                    <p class="composition">Drotaverine 80mg + Mefenamic Acid 250mg</p>
+                </div>
+                <div class="product-body">
+                    <p>Untangle the Strangle hold of Pain & Spasm</p>
+                    <ul>
+                        <li>Excellent smooth muscle relaxant</li>
+                        <li>Free from anticholinergic side effects</li>
+                        <li>Safe in glaucoma & BPH patients</li>
+                        <li>The time tested analgesic</li>
+                        <li>Ensures longer relief from pain & inflammation</li>
+                        <li>Provides superior pain relief in primary dysmenorrheal</li>
+                        <li>No drowsiness/No urinary retention</li>
+                        <li>Indications: Gastrointestinal colic, biliary colic, post surgical spasm, muscle spasm, renal colic, dysmenorrhea</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="syllantus.png" alt="Syllantus QR Syrup">
+                </div>
+                <div class="product-header">
+                    <h3>Syllantus QR Syrup</h3>
+                    <p class="composition">Dextromethorphan 15mg + Cetirizine 5mg + Phenylephrine 8mg + Ambroxol 30mg + Guaiphenesin 100mg + Sodium Citrate 75mg</p>
+                </div>
+                <div class="product-body">
                     <p>All Rounder of Cough and Cold</p>
                     <ul>
                         <li>Cough Suppressant (Dextromethorphen)</li>
@@ -949,66 +1017,3 @@
     </script>
 </body>
 </html>
-                    <p>Pain, Fever & Inflammation</p>
-                    <ul>
-                        <li>Offers powerful anti-inflammatory action</li>
-                        <li>Multi-pronged mode of anti-inflammatory action</li>
-                        <li>Selective inhibition of COX-2 enzyme for target specific result</li>
-                        <li>Outstanding performance in arthritis, low back pain, painful musculo-skeletal conditions</li>
-                        <li>Effective in pain associated with fever, sports injuries, dental pain, and painful conditions of E.N.T.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="oke-650.png" alt="OKE-650 Product">
-                </div>
-                <div class="product-header">
-                    <h3>OKE-650</h3>
-                    <p class="composition">Paracetamol 500/650 mg</p>
-                </div>
-                <div class="product-body">
-                    <p>The First Choice for Pain & Fever</p>
-                    <ul>
-                        <li>Safe & time tested anti-pyretic and analgesic</li>
-                        <li>Least GI disturbances</li>
-                        <li>Also effective in associated pain & inflammation</li>
-                        <li>Safety with outstanding efficacy</li>
-                        <li>Effective for headache, dental pain, fever, sinusitis, sciatica & lumbago, sprains & strains</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="oke-spas.png" alt="OKE Spas Product">
-                </div>
-                <div class="product-header">
-                    <h3>OKE Spas</h3>
-                    <p class="composition">Drotaverine 80mg + Mefenamic Acid 250mg</p>
-                </div>
-                <div class="product-body">
-                    <p>Untangle the Strangle hold of Pain & Spasm</p>
-                    <ul>
-                        <li>Excellent smooth muscle relaxant</li>
-                        <li>Free from anticholinergic side effects</li>
-                        <li>Safe in glaucoma & BPH patients</li>
-                        <li>The time tested analgesic</li>
-                        <li>Ensures longer relief from pain & inflammation</li>
-                        <li>Provides superior pain relief in primary dysmenorrheal</li>
-                        <li>No drowsiness/No urinary retention</li>
-                        <li>Indications: Gastrointestinal colic, biliary colic, post surgical spasm, muscle spasm, renal colic, dysmenorrhea</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="syllantus.png" alt="Syllantus QR Syrup">
-                </div>
-                <div class="product-header">
-                    <h3>Syllantus QR Syrup</h3>
-                    <p class="composition">Dextromethorphan 15mg + Cetirizine 5mg + Phenylephrine 8mg + Ambroxol 30mg + Guaiphenesin 100mg + Sodium Citrate 75mg</p>
-                </div>
-                <div class="product-body">
